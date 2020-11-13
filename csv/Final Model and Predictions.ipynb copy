@@ -2,9 +2,18 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 1,
+   "execution_count": 6,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax (<ipython-input-6-d2f1f5a03269>, line 23)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-6-d2f1f5a03269>\"\u001b[0;36m, line \u001b[0;32m23\u001b[0m\n\u001b[0;31m    import /edit/functions.py as fun\u001b[0m\n\u001b[0m           ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+     ]
+    }
+   ],
    "source": [
     "import warnings\n",
     "warnings.filterwarnings('ignore')\n",
@@ -28,7 +37,8 @@
     "\n",
     "\n",
     "\n",
-    "import functions as fun\n",
+    "import functions.py as fun\n",
+    "\n",
     "\n",
     "\n",
     "import datetime\n",
@@ -39,7 +49,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 2,
+   "execution_count": null,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -49,20 +59,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 3,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "'top_zips_with_all_columns.csv'"
-      ]
-     },
-     "execution_count": 3,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
+   "outputs": [],
    "source": [
     "# plotting dfs:\n",
     "('roi_df_plotting.csv')\n",
@@ -76,84 +75,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 117,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>ZipCode</th>\n",
-       "      <th>Time</th>\n",
-       "      <th>Value</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>0</th>\n",
-       "      <td>60657</td>\n",
-       "      <td>2011-01-01</td>\n",
-       "      <td>729300.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>1</th>\n",
-       "      <td>60614</td>\n",
-       "      <td>2011-01-01</td>\n",
-       "      <td>923000.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>2</th>\n",
-       "      <td>60640</td>\n",
-       "      <td>2011-01-01</td>\n",
-       "      <td>600000.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>3</th>\n",
-       "      <td>60647</td>\n",
-       "      <td>2011-01-01</td>\n",
-       "      <td>286500.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>4</th>\n",
-       "      <td>60618</td>\n",
-       "      <td>2011-01-01</td>\n",
-       "      <td>317400.0</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "   ZipCode        Time     Value\n",
-       "0    60657  2011-01-01  729300.0\n",
-       "1    60614  2011-01-01  923000.0\n",
-       "2    60640  2011-01-01  600000.0\n",
-       "3    60647  2011-01-01  286500.0\n",
-       "4    60618  2011-01-01  317400.0"
-      ]
-     },
-     "execution_count": 117,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
+   "outputs": [],
    "source": [
     "df = pd.read_csv('chicago_melted.csv')\n",
     "df.head()"
@@ -161,106 +85,18 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 11,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "Index(['RegionID', 'ZipCode', 'City', 'State', 'Metro', 'CountyName',\n",
-       "       'SizeRank', 'time', 'MeanValue'],\n",
-       "      dtype='object')"
-      ]
-     },
-     "execution_count": 11,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
+   "outputs": [],
    "source": [
     "df.columns"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 118,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>ZipCode</th>\n",
-       "      <th>Value</th>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>Time</th>\n",
-       "      <th></th>\n",
-       "      <th></th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>2011-01-01</th>\n",
-       "      <td>60657</td>\n",
-       "      <td>729300.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>2011-01-01</th>\n",
-       "      <td>60614</td>\n",
-       "      <td>923000.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>2011-01-01</th>\n",
-       "      <td>60640</td>\n",
-       "      <td>600000.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>2011-01-01</th>\n",
-       "      <td>60647</td>\n",
-       "      <td>286500.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>2011-01-01</th>\n",
-       "      <td>60618</td>\n",
-       "      <td>317400.0</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "            ZipCode     Value\n",
-       "Time                         \n",
-       "2011-01-01    60657  729300.0\n",
-       "2011-01-01    60614  923000.0\n",
-       "2011-01-01    60640  600000.0\n",
-       "2011-01-01    60647  286500.0\n",
-       "2011-01-01    60618  317400.0"
-      ]
-     },
-     "execution_count": 118,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
+   "outputs": [],
    "source": [
     "df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m')\n",
     "df.set_index('Time', inplace = True)\n",
@@ -269,34 +105,16 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 119,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "DatetimeIndex(['2011-01-01', '2011-01-01', '2011-01-01', '2011-01-01',\n",
-       "               '2011-01-01', '2011-01-01', '2011-01-01', '2011-01-01',\n",
-       "               '2011-01-01', '2011-01-01',\n",
-       "               ...\n",
-       "               '2018-04-01', '2018-04-01', '2018-04-01', '2018-04-01',\n",
-       "               '2018-04-01', '2018-04-01', '2018-04-01', '2018-04-01',\n",
-       "               '2018-04-01', '2018-04-01'],\n",
-       "              dtype='datetime64[ns]', name='Time', length=1760, freq=None)"
-      ]
-     },
-     "execution_count": 119,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
+   "outputs": [],
    "source": [
     "df.index"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 122,
+   "execution_count": null,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -310,30 +128,19 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 123,
+   "execution_count": 2,
    "metadata": {},
    "outputs": [
     {
-     "data": {
-      "text/plain": [
-       "Time\n",
-       "2011-01-01    286500.0\n",
-       "2011-02-01    285800.0\n",
-       "2011-03-01    283800.0\n",
-       "2011-04-01    282100.0\n",
-       "2011-05-01    281700.0\n",
-       "                ...   \n",
-       "2017-12-01    470600.0\n",
-       "2018-01-01    474500.0\n",
-       "2018-02-01    475100.0\n",
-       "2018-03-01    472600.0\n",
-       "2018-04-01    470200.0\n",
-       "Name: 60647, Length: 88, dtype: float64"
-      ]
-     },
-     "execution_count": 123,
-     "metadata": {},
-     "output_type": "execute_result"
+     "ename": "NameError",
+     "evalue": "name 'zip_dict' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "\u001b[0;32m<ipython-input-2-9cec5f3f6a08>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mzip_dict\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m60647\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m: name 'zip_dict' is not defined"
+     ]
     }
    ],
    "source": [
@@ -1569,6 +1376,19 @@
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
    "version": "3.6.9"
+  },
+  "toc": {
+   "base_numbering": 1,
+   "nav_menu": {},
+   "number_sections": true,
+   "sideBar": true,
+   "skip_h1_title": false,
+   "title_cell": "Table of Contents",
+   "title_sidebar": "Contents",
+   "toc_cell": false,
+   "toc_position": {},
+   "toc_section_display": true,
+   "toc_window_display": true
   },
   "varInspector": {
    "cols": {
