@@ -74,7 +74,7 @@ After choosing the best parameters for all 20 zip codes, I ran the training and 
 
 - Boystown / Lakeview 60613
 
-<img src="images/model60613.png" style="width:50%">
+<img src="images/60613Model.png" style="width:50%">
 
 - Auburn Greshem 60620
 
